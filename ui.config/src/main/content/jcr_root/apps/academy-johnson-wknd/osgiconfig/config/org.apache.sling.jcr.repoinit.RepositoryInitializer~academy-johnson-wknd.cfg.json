@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/academy-johnson-wknd",
+        "create path (nt:unstructured) /content/dam/academy-johnson-wknd/jcr:content",
+        "set properties on /content/dam/academy-johnson-wknd/jcr:content\n  set cq:conf{String} to /conf/academy-johnson-wknd\n  set jcr:title{String} to \"academy-site-johnson\"\nend"
+    ]
+}

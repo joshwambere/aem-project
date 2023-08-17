@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/academy-johnson-wknd" mode="merge"/>
+    <filter root="/content/academy-johnson-wknd" mode="merge"/>
+    <filter root="/content/dam/academy-johnson-wknd/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/academy-johnson-wknd" mode="merge"/>
+</workspaceFilter>
