@@ -26,18 +26,60 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/container">
                                 <items jcr:primaryType="nt:unstructured">
-                                    <title
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="title"
-                                        name="./jcr:title"
-                                        required="{Boolean}true"/>
-                                    <text
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                        fieldLabel="description"
-                                        name="./description"
-                                        required="{Boolean}true"/>
+                                    <type
+                                            granite:class="type-selector"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            name="./type">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fullWindow
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Full Window"
+                                                    value="FULL_WINDOW"/>
+                                            <sizedContainer
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Sized Container"
+                                                    value="SIZED_CONTAINER"/>
+                                            <inline
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="In-Line"
+                                                    value="IN_LINE"/>
+                                        </items>
+                                    </type>
+
+
+                                    <FullVideoPath
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Make the image a link to another resource."
+                                            fieldLabel="Link"
+                                            nodeTypes="dam:Asset, nt:file, nt:folder, cq:Page,  sling:Folder, sling:OrderedFolder"
+                                            name="./FullVideoPath"
+                                            granite:class="fullVideoReferenceClass"
+                                            required="{Boolean}true"
+                                            rootPath="/content/dam"/>
+
+                                    <sizedContainer
+                                            granite:class="sizedContainerReferenceClass"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Make the image a link to another resource."
+                                            fieldLabel="Link"
+                                            nodeTypes="dam:Asset, nt:file, nt:folder, cq:Page,  sling:Folder, sling:OrderedFolder"
+                                            name="./sizedContainer"
+                                            required="{Boolean}true"
+                                            rootPath="/content/dam"/>
+                                    <inline
+                                            jcr:primaryType="nt:unstructured"
+                                            granite:class="inlineClass"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldDescription="Make the image a link to another resource."
+                                            fieldLabel="Link"
+                                            nodeTypes="dam:Asset, nt:file, nt:folder, cq:Page,  sling:Folder, sling:OrderedFolder"
+                                            name="./inline"
+                                            required="{Boolean}true"
+                                            rootPath="/content/dam"/>
                                 </items>
                             </column>
                         </items>
