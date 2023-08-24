@@ -33,6 +33,18 @@
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="granite/ui/components/coral/foundation/container">
                                         <items jcr:primaryType="nt:unstructured">
+                                            <countries
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    emptyOption="{Boolean}true"
+                                                    fieldLabel="Country"
+                                                    name="./country"
+                                                    required="{Boolean}true">
+                                                <datasource
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="/bin/academy/johnson/dynamicFields"
+                                                        dynamic="/apps/academy-johnson-wknd/components/listComponent/countries.json"/>
+                                            </countries>
                                             <listFrom
                                                     granite:class="cq-dialog-dropdown-showhide"
                                                     jcr:primaryType="nt:unstructured"
